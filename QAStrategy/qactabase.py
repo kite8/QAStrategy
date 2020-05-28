@@ -214,7 +214,7 @@ class QAStrategyCTABase():
         user = QA_User(username=self.username, password=self.password)
         port = user.new_portfolio(self.portfolio)
         self.acc = port.new_accountpro(
-            account_cookie=self.strategy_id, init_cash=self.init_cash, market_type=self.market_type)
+            account_cookie=self.strategy_id, init_cash=self.init_cash, market_type=self.market_type, frequence=self.frequence)
         self.positions = self.acc.get_position(self.code)
 
         print(self.acc)
